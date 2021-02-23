@@ -135,6 +135,11 @@ function baseSetup {
             'gsfonts'               # Adobe Postscript replacement fonts
             'hplip'                 # HP Drivers
             'system-config-printer' # Printer setup  utility
+        
+        # --- Gaming Utilities
+        'wine-valve'            # Wine from Valve
+        'vulkan-headers'        # Vulkan framework
+        'proton'                # Easiy running Steam games on Linux
     )
 
     for PKG in "${PKGS[@]}"; do
