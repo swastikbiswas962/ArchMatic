@@ -21,7 +21,7 @@ echo -e "\nInstalling prereqs...\n$HR"
 pacman -S --noconfirm gptfdisk btrfs-progs
 
 echo "-------------------------------------------------"
-echo "-------select your disk to format----------------"
+echo "-----------Select your disk to format------------"
 echo "-------------------------------------------------"
 lsblk
 echo "Please enter disk: (example /dev/sda)"
@@ -47,7 +47,7 @@ sgdisk -c 1:"UEFISYS" ${DISK}
 sgdisk -c 2:"ROOT" ${DISK}
 
 # make filesystems
-echo -e "\nCreating Filesystems...\n$HR"
+echo -e "\nCreating File systems...\n$HR"
 
 mkfs.vfat -F32 -n "UEFISYS" "${DISK}1"
 mkfs.ext4 -L "ROOT" "${DISK}2"
@@ -60,7 +60,7 @@ mkdir /mnt/boot/efi
 mount -t vfat "${DISK}1" /mnt/boot/
 
 echo "--------------------------------------"
-echo "-- Arch Install on Main Drive       --"
+echo "--    Arch Install on Main Drive    --"
 echo "--------------------------------------"
 pacstrap /mnt base base-devel linux linux-firmware vim nano sudo --noconfirm --needed
 genfstab -U /mnt >> /mnt/etc/fstab
