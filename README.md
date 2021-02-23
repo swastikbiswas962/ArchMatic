@@ -1,4 +1,4 @@
-# Titus ArchMatic Installer Script
+# Polybit ArchMatic Installer Script
 
 <img src="https://i.imgur.com/Yn29sze.png" />
 
@@ -15,7 +15,7 @@ First, setup the boot USB, boot arch live iso, and run the `preinstall.sh` from 
 This step installs arch to your hard drive. *IT WILL FORMAT THE DISK*
 
 ```bash
-wget https://raw.githubusercontent.com/ChrisTitusTech/ArchMatic/master/preinstall.sh
+wget https://raw.githubusercontent.com/swastikbiswas962/ArchMatic/master/preinstall.sh
 sh preinstall.sh
 reboot
 ```
@@ -24,7 +24,7 @@ reboot
 
 ```bash
 pacman -S --no-confirm pacman-contrib curl git
-git clone https://github.com/ChrisTitusTech/ArchMatic
+git clone https://github.com/swastikbiswas962/ArchMatic
 cd ArchMatic
 ./0-setup.sh
 ./1-base.sh
@@ -33,7 +33,8 @@ cd ArchMatic
 ./9-post-setup.sh
 ```
 
-### Don't just run these scripts. Examine them. Customize them. Create your own versions.
+### It is recommended to not only run the scripts, but to fork this GitHub repository, then examining and changing the code as per liking.
+Hyperlink changes will be ```https://github.com/<your-github-name>/ArchMatic/...```
 
 ---
 
